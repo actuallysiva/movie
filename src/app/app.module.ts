@@ -28,7 +28,7 @@ import { MovieService } from './movie.service';
       { path: '', redirectTo: '/search', pathMatch: 'full'},
       { path: '*', component: SearchComponent},
       { path: '**', component: SearchComponent}
-    ])
+    ]),
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]
