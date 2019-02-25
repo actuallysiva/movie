@@ -1,0 +1,24 @@
+<div class="container">
+  <!-- For search bar -->
+    <div class="col-12">
+      <div class="input-group mb-3">
+        <input #searchBox [formControl]="searchField" type="search" autofocus="true" class="form-control"
+          placeholder="Search Movies Here....">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" (click)="searchMovies(searchBox.value)" type="submit"
+            id="button-addon2">Search</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- For body section -->
+    <div class="container">
+        <div class="row">
+            <!-- For listing movies-->
+            <div *ngIf="showList">
+              <app-list [movies]="movieList"></app-list>
+            </div>
+          </div>
+    </div>
+    
+</div>

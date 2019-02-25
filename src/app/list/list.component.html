@@ -1,0 +1,10 @@
+<div class="row" *ngIf="movies">
+    <div class="col-4">
+        <div *ngFor="let movie of movies">
+            <ul class="list-group">
+                <button class="list-group-item" (click)="myClickFunction(movie)">{{movie.Title}}</button>
+            </ul>
+        </div>
+    </div>
+    <app-details [movie]="selectedMovie"></app-details>
+</div>
